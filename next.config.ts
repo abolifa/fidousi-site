@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
         port: "8000",
         pathname: "/storage/**",
       },
+      {
+        protocol: "https",
+        hostname: "fordousi.eratech.com.ly",
+        port: "443",
+        pathname: "/storage/**",
+      },
+      {
+        protocol: "https",
+        hostname: "eratech.com.ly",
+        port: "443",
+        pathname: "/storage/**",
+      },
     ],
   },
 };
