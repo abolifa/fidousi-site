@@ -37,7 +37,7 @@ const Navbar = () => {
       <header className="w-full h-20 container mx-auto flex items-center justify-between px-6 md:px-12">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logo.png"
+            src="/images/app-logo.png"
             alt="Logo"
             width={200}
             height={40}
