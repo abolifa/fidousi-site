@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,6 +57,15 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
+
+          <a
+            href="mailto:oso_zf85@yahoo.com"
+            className="hover:text-blue-400 transition flex items-center gap-2"
+          >
+            <span className="text-blue-600 underline underline-offset-2 text-sm">
+              oso_zf85@yahoo.com
+            </span>
+          </a>
         </nav>
 
         <button
@@ -90,6 +99,18 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            <div className="flex justify-center pb-5">
+              <a
+                href="mailto:oso_zf85@yahoo.com"
+                className="hover:text-blue-400 transition flex items-center gap-2"
+              >
+                <Mail size={20} />
+                <span className="text-blue-600 underline underline-offset-2 text-sm">
+                  oso_zf85@yahoo.com
+                </span>
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
