@@ -82,14 +82,22 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
+            action="https://formsubmit.co/abulifa95@yahoo.com"
+            method="POST"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 1 }}
+            className="space-y-5"
           >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="رسالة جديدة من موقعك" />
+            <input type="hidden" name="_template" value="table" />
+
             <h3 className="text-xl font-semibold mb-4 text-blue-300">
               أرسل لنا رسالة
             </h3>
+
             <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 space-y-5">
               <div>
                 <label className="block text-sm text-gray-200 mb-2">
@@ -97,9 +105,10 @@ const Contact = () => {
                 </label>
                 <motion.input
                   whileFocus={{ scale: 1.02 }}
-                  viewport={{ once: true, amount: 0.2 }}
                   type="text"
+                  name="name"
                   placeholder="اكتب اسمك الكامل"
+                  required
                   className="w-full rounded-lg p-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -110,9 +119,10 @@ const Contact = () => {
                 </label>
                 <motion.input
                   whileFocus={{ scale: 1.02 }}
-                  viewport={{ once: true, amount: 0.2 }}
                   type="email"
+                  name="email"
                   placeholder="example@email.com"
+                  required
                   className="w-full rounded-lg p-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -123,9 +133,10 @@ const Contact = () => {
                 </label>
                 <motion.textarea
                   whileFocus={{ scale: 1.02 }}
-                  viewport={{ once: true, amount: 0.2 }}
                   rows={4}
+                  name="message"
                   placeholder="اكتب رسالتك هنا..."
+                  required
                   className="w-full rounded-lg p-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
                 ></motion.textarea>
               </div>
@@ -133,7 +144,6 @@ const Contact = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                viewport={{ once: true, amount: 0.2 }}
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-md transition"
               >

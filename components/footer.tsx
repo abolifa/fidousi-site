@@ -47,10 +47,19 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-3 mt-4 justify-center">
             {[
-              { icon: Facebook, href: "https://www.facebook.com/" },
-              { icon: Instagram, href: "https://www.instagram.com/" },
-              { icon: Linkedin, href: "https://www.linkedin.com/" },
-              { icon: Globe, href: "https://cei.it" },
+              {
+                icon: Facebook,
+                href: "https://www.facebook.com/profile.php?id=100086911845116",
+              },
+              {
+                icon: Instagram,
+                href: "https://www.instagram.com/fardousi_trading_company",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/osama-fardousi-882038210",
+              },
+              { icon: Globe, href: "https://www.cei.it/" },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
