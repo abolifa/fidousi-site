@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="Logo"
             width={200}
             height={40}
-            className="object-contain h-14 w-auto"
+            className="object-contain h-16 w-auto"
             priority
           />
         </Link>

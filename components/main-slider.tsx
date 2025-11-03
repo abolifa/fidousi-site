@@ -22,7 +22,7 @@ const MainSlider = ({ sliders }: MainSliderProps) => {
   }, [sliders.length]);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
+    const timer = setInterval(nextSlide, 10000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
@@ -46,14 +46,18 @@ const MainSlider = ({ sliders }: MainSliderProps) => {
         </AnimatePresence>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent flex flex-col items-start justify-center px-8 md:px-28 text-left text-white">
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent flex flex-col items-center justify-center text-center px-6 md:px-28 text-white">
           <motion.h2
             key={`title-${current.id}`}
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -20, opacity: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-3xl md:text-5xl font-bold mb-3 drop-shadow-xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{
+              delay: 1.2, // wait for image transition
+              duration: 1,
+              ease: "easeOut",
+            }}
+            className="text-3xl md:text-5xl font-bold mb-3 drop-shadow-xl max-w-3xl"
           >
             {current.title}
           </motion.h2>
@@ -61,11 +65,15 @@ const MainSlider = ({ sliders }: MainSliderProps) => {
           {current.sub_title && (
             <motion.p
               key={`subtitle-${current.id}`}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 20, opacity: 0 }}
-              transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-              className="text-base md:text-3xl max-w-3xl opacity-90 drop-shadow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                delay: 1.5, // starts slightly after title
+                duration: 1,
+                ease: "easeOut",
+              }}
+              className="text-base md:text-3xl max-w-4xl opacity-90 drop-shadow"
             >
               {current.sub_title}
             </motion.p>

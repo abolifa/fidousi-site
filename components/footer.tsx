@@ -37,14 +37,13 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
         >
           <img
-            src="/images/logo-dark.png"
+            src="/images/app-logo-gold.png"
             alt="Alfirdousi Logo"
-            className="h-13 w-auto mb-4"
+            className="h-14 w-auto mb-4"
           />
           <p className="text-gray-300 text-xs leading-relaxed mb-4 text-justify">
-            شركة ليبية متخصصة في استيراد وبيع قطع غيار نواقل الحركة للشاحنات
-            والمركبات الثقيلة. نلتزم بتقديم منتجات أصلية وموثوقة من أبرز المصانع
-            العالمية.
+            شركة متخصصة في استيراد وبيع قطع غيار نواقل الحركة للشاحنات والمركبات
+            الثقيلة. نلتزم بتقديم منتجات أصلية وموثوقة من أبرز المصانع العالمية.
           </p>
           <div className="flex items-center gap-3 mt-4 justify-center">
             {[
@@ -113,6 +112,16 @@ const Footer = () => {
                 dir="ltr"
               >
                 +218 91 731 7311
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone size={18} className="text-blue-400" />
+              <a
+                href="tel:+218917317311"
+                className="hover:text-blue-400 transition"
+                dir="ltr"
+              >
+                +218 92 517 4096
               </a>
             </li>
             <li className="flex items-center gap-3">

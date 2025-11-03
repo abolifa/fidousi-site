@@ -32,7 +32,7 @@ const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
         </motion.h2>
 
         {/* شبكة المنتجات */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {products.map((product) => (
             <Link key={product.id} href={`/products/${product.id}`}>
               <motion.div
@@ -43,16 +43,16 @@ const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="group border rounded-2xl shadow-lg overflow-hidden transition-all duration-300"
               >
-                <div className="relative h-56 md:h-72 overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src={getServerImage(product.main_image ?? "")}
                     alt={product.name}
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 border-b shadow-md"
+                    className="object-contain group-hover:scale-110 transition-transform duration-700 border-b shadow-md"
                     loading="lazy"
                   />
                 </div>
                 <div className="p-5 text-center">
-                  <h3 className="text-lg font-bold mb-2">{product.name}</h3>
+                  <h3 className="text-md font-bold mb-2">{product.name}</h3>
                   <p
                     className="text-sm text-gray-600 leading-relaxed"
                     dangerouslySetInnerHTML={{
