@@ -17,7 +17,7 @@ const noto = Noto_Kufi_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: " الفردوسي التجارية",
+  title: "شركة فردوسي التجارية | لاستيراد وسائل النقل وملحقاتها",
   description: "لقطع غيار الشاحنات والمعدات الثقيلة",
 };
 
