@@ -32,7 +32,7 @@ const Home = () => {
       ) : isError ? (
         <div>Error: {(error as Error).message}</div>
       ) : (
-        <div className="w-full flex flex-col gap-2">
+        <div className="w-full flex flex-col gap-0">
           <section id="home">
             <MainSlider sliders={data?.sliders ?? []} />
           </section>

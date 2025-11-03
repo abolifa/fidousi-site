@@ -9,6 +9,9 @@ interface SectionProps {
 }
 
 const SectionWidget = ({ section }: SectionProps) => {
+  if (!section) {
+    return null;
+  }
   return (
     <section
       dir="rtl"
