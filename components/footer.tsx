@@ -49,7 +49,7 @@ const Footer = () => {
             {[
               {
                 icon: Facebook,
-                href: "https://www.facebook.com/profile.php?id=100086911845116",
+                href: "https://www.facebook.com/share/17CM5uGR5h/",
               },
               {
                 icon: Instagram,
