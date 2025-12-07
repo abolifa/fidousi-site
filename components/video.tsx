@@ -27,7 +27,7 @@ const VideoSection = () => {
         transition={{ duration: 0.8 }}
         className="w-full"
       >
-        <div className="relative w-full h-[100vh] md:h-[70vh] bg-blue-800 overflow-hidden">
+        <div className="relative w-full h-screen md:h-[70vh] bg-blue-800 overflow-hidden">
           <video
             ref={ref}
             playsInline
