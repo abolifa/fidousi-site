@@ -41,7 +41,7 @@ const Navbar = () => {
             alt="Logo"
             width={200}
             height={40}
-            className="object-contain h-16 w-auto"
+            className="object-contain h-12 w-auto"
             priority
           />
         </Link>
@@ -57,24 +57,24 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
-
-          <a
-            href="mailto:oso_zf85@yahoo.com"
-            className="hover:text-blue-400 transition flex items-center gap-2"
-          >
-            <span className="text-blue-600 underline underline-offset-2 text-sm">
-              oso_zf85@yahoo.com
-            </span>
-          </a>
         </nav>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-800 dark:text-gray-200"
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        <div className="flex items-center gap-4">
+          <a
+            href="mailto:oso_zf85@yahoo.com"
+            className="p-2 rounded-full bg-white border border-gray-500 hover:border-blue-400 shadow-md hover:shadow-lg transition flex items-center justify-center text-gray-800 dark:text-gray-200 ml-4"
+          >
+            <Mail size={20} className="hover:text-blue-400 text-gray-500" />
+          </a>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-gray-800 dark:text-gray-200"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </header>
 
       <AnimatePresence>

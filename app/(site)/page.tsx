@@ -9,6 +9,7 @@ import FeaturedProducts from "@/components/products";
 import ScrollToTop from "@/components/scroll-to-top";
 import SectionWidget from "@/components/section";
 import { Skeleton } from "@/components/ui/skeleton";
+import VideoSection from "@/components/video";
 import api from "@/lib/api";
 import { HomeData } from "@/lib/models";
 import { useQuery } from "@tanstack/react-query";
@@ -43,6 +44,10 @@ const Home = () => {
 
           <section id="partnership">
             <Partnership />
+          </section>
+
+          <section id="video">
+            <VideoSection />
           </section>
 
           <section id="products">
